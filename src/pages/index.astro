@@ -1,44 +1,18 @@
 ---
-import Navbar from "../components/Navbar.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 // Esto de acá es solo renderizado en el servidor.
-const name = 'Juan Pablo';
+const name = "Juan Pablo";
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
-	<title>Curso de Astro</title>
-</head>
-<body>
+<MainLayout title="Página principal | Curso de Astro">
+  <p>
+    Este es un `proyecto de prueba' para poner en práctica Astro. Soy <span
+      >{name}</span>
+	Esta es la página principal.
+  </p>
 
-	<Navbar />
+  <!-- Prueba de javascript en astro y client side rendering -->
 
-	<h1>Proyecto de curso de Astro</h1>
-	<p>Este es un `proyecto de prueba' para poner en práctica Astro. Soy <span>{name}</span></p>
-
-	<!-- Prueba de javascript en astro y client side rendering -->
-
-	<p>Momento actual: {new Date().toLocaleTimeString()}</p>
-	<p id="current-time">Momento actual real: </p>
-
-	<footer>
-		
-	</footer>
-
-	<script>
-		const currentYear: number = new Date().getFullYear();
-		const footer = document.querySelector('footer') as HTMLElement;
-		footer.innerText = `Año actual: ${ currentYear } © Curso de Astro`;
-		
-		//solo en el lado del cliente ( client side rendering )
-		const timeParagraph = document.querySelector('#current-time') as HTMLElement;
-
-		timeParagraph.innerText = `Momento actual real: ${ new Date().toLocaleTimeString()}`
-
-	</script>
-</body>
-</html>
+  <p>Momento actual: {new Date().toLocaleTimeString()}</p>
+  <p id="current-time">Momento actual real:</p>
+</MainLayout>

@@ -1,20 +1,7 @@
 ---
-import Navbar from "../components/Navbar.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
-</head>
-<body>
-
-    <Navbar />
-
-    <h1>Sobre nosotros</h1>
-    <p>Esto es una página `sobre nosotros` para el curso de Astro.</p>
-</body>
-</html>
+<MainLayout title="Sobre Nosotros">
+  <p>Esto es una página `sobre nosotros` para el curso de Astro.</p>
+</MainLayout>
