@@ -1,8 +1,17 @@
 ---
+import '../styles/navbar.css'
+
 
 ---
 
-<nav>
-		<a href="/">Inicio</a> |
-		<a href="/about">Sobre nosotros</a>
+<nav class="navbar">
+	<div class="navbar__logo">
+		<img class="navbar__logo-icon" src="/src/assets/logo-chacu.jpeg" alt="Logo de Chacú.IO">
+		<h6 class="navbar__logo-text">Chacú.IO | Noticias</h6>
+	</div>
+	<div class="navbar__links">
+		<a class="navbar__link" href="/" title="Ir a la página de inicio" >Inicio</a> 
+		<a class="navbar__link" href="/about" title="Ver información de la empresa">Sobre nosotros</a>
+	</div>
+		
 </nav>
